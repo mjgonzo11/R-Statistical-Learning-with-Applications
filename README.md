@@ -79,6 +79,7 @@ Multiple models were implemented and compared:
 * Linear Regression (baseline)
 * Ridge Regression
 * Elastic Net
+  
 🌲 Tree-Based Models
 * Random Forest
 * Boosting
