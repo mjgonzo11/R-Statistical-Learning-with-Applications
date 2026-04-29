@@ -78,23 +78,22 @@ Multiple models were implemented and compared:
 📈 Linear Models
 * Linear Regression (baseline)
 * Ridge Regression
-* Lasso Regression
 * Elastic Net
 🌲 Tree-Based Models
-* Decision Tree
 * Random Forest
 * Boosting
 
 ## 📊 Model Performance
-Model	R²	RMSE
-Linear Regression (baseline)	~0.49	~13.45
-Extended Linear Model	~0.54	~12.80
-Elastic Net	~0.54	~12.85
-Random Forest	~0.53	~13.03
+| Model |	R² |	RMSE |
+* Linear Regression (baseline)	~0.48	~13.65
+* Elastic Net	~0.48	~13.65
+* Random Forest	~0.56	~12.62
+* Bagging ~0.54 ~12.86
+* Boosting ~0.53 ~12.95
 
 🏆 Best Model
 
-The interaction-enhanced linear model achieved the best performance, suggesting:
+The Random Forest achieved the best performance, suggesting:
 
 Relationships are partially linear
 But benefit from feature interactions
