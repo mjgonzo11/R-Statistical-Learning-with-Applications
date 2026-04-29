@@ -9,12 +9,12 @@ The analysis focuses exclusively on four-year U.S. institutions and integrates m
 
 All datasets were downloaded from NCES IPEDS:
 
-GR2024 – Graduation Rates (used to construct target variable)
-IC2024 – Institutional Characteristics
-EF2024D – Fall Enrollment (retention + student–faculty ratio)
-SFA2324 – Student Financial Aid
-HD2024 – Institutional directory (state, name)
-ADM2024 – Admissions (selectivity measures)
+* GR2024 – Graduation Rates (used to construct target variable)
+* IC2024 – Institutional Characteristics
+* EF2024D – Fall Enrollment (retention + student–faculty ratio)
+* SFA2324 – Student Financial Aid
+* HD2024 – Institutional directory (state, name)
+* ADM2024 – Admissions (selectivity measures)
 
 IPEDS Graduation Rates are reported in long format, each row represents a single observation, with variables listed in columns
 For this project we wil focus on Hispanic students:
@@ -70,6 +70,41 @@ Pre-model analysis revealed:
 * Negative relationship between admission rate and completion
 * Moderate financial effects
 * Modest geographic (state-level) influence
+
+## Models Used
+
+Multiple models were implemented and compared:
+
+📈 Linear Models
+* Linear Regression (baseline)
+* Ridge Regression
+* Lasso Regression
+* Elastic Net
+🌲 Tree-Based Models
+* Decision Tree
+* Random Forest
+* Boosting
+
+## 📊 Model Performance
+Model	R²	RMSE
+Linear Regression (baseline)	~0.49	~13.45
+Extended Linear Model	~0.54	~12.80
+Elastic Net	~0.54	~12.85
+Random Forest	~0.53	~13.03
+
+🏆 Best Model
+
+The interaction-enhanced linear model achieved the best performance, suggesting:
+
+Relationships are partially linear
+But benefit from feature interactions
+
+## 📌 Key Insights
+Retention rate is the strongest predictor of Latino completion
+Higher SAT scores correlate with higher completion rates
+Lower admission rates (more selective schools) → higher completion
+Higher student–faculty ratios → lower completion rates
+Financial variables have smaller but meaningful effects
 
 
 
