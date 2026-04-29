@@ -82,6 +82,7 @@ Multiple models were implemented and compared:
 🌲 Tree-Based Models
 * Random Forest
 * Boosting
+* Bagging
 
 ## 📊 Model Performance
 | Model |	R² |	RMSE |
@@ -99,13 +100,22 @@ Relationships are partially linear
 But benefit from feature interactions
 
 ## 📌 Key Insights
-Retention rate is the strongest predictor of Latino completion
-Higher SAT scores correlate with higher completion rates
-Lower admission rates (more selective schools) → higher completion
-Higher student–faculty ratios → lower completion rates
-Financial variables have smaller but meaningful effects
+Across all five models, retention rate and institutional type (CNTLAFFI) emerged as the most consistent and dominant predictors of Hispanic completion rates — confirmed independently by both Random Forest and Boosting, two fundamentally different architectures.
 
+SAT median was significant in linear regression, but ranked lower in tree models — challenging how selecting higher performing students is a primary driver of completion rates.
 
+Financial variables like Student loans, Pell Grants, and avg. loan amount consistently ranked in a secondary tier — meaningful but not primary drivers.
+
+Elastic Net and Linear Regression performed nearly identically, confirming no overfitting in the baseline model.
+
+## Future works
+
+* more variables, incorporate campus resources, programming, and local economic factors, admissions support, academic support  as predictors.
+* Multi year data, Add data across multiple years to track trends over time and improve generalizability.
+* Advanced methods, Test additional models that may outperform Random Forest; build an institutional risk-signaling tool.
+* other demographics, Extend analysis to Black students (lowest completion), Asian students (high completion, lower enrollment), and other minorities.
 
 # Contributors
+Jesica Garcia, Martin Gonzalez, & Habib Barbour
+
 
